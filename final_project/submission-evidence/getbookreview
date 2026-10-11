@@ -1,0 +1,6 @@
+Command:
+BASE=http://127.0.0.1:5000
+curl -sS "$BASE/review/1"
+
+Actual response (before adding the test review):
+{}

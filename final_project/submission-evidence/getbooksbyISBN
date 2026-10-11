@@ -1,0 +1,6 @@
+Command:
+BASE=http://127.0.0.1:5000
+curl -sS "$BASE/isbn/1"
+
+Actual response:
+{"author":"Chinua Achebe","title":"Things Fall Apart","reviews":{}}

@@ -1,0 +1,18 @@
+GitHub API request: GET /repos/KARTIKPISE31/expressBookReviews
+HTTP status: 200
+
+Actual response fields:
+{
+  "full_name": "KARTIKPISE31/expressBookReviews",
+  "html_url": "https://github.com/KARTIKPISE31/expressBookReviews",
+  "fork": true,
+  "parent": {
+    "full_name": "ibm-developer-skills-network/expressBookReviews",
+    "html_url": "https://github.com/ibm-developer-skills-network/expressBookReviews"
+  },
+  "source": {
+    "full_name": "ibm-developer-skills-network/expressBookReviews",
+    "html_url": "https://github.com/ibm-developer-skills-network/expressBookReviews"
+  },
+  "default_branch": "main"
+}

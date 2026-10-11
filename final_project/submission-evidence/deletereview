@@ -1,0 +1,16 @@
+Command:
+BASE=http://127.0.0.1:5000
+# Set PASSWORD to the one-time test-only value; this keeps the bearer token out
+# of the evidence file and mints a fresh one for the same session.
+TOKEN=$(curl -sS -X POST "$BASE/login" \
+  -H 'Content-Type: application/json' \
+  -d "{\"username\":\"submission_evidence\",\"password\":\"$PASSWORD\"}" \
+  | node -pe 'JSON.parse(require("fs").readFileSync(0,"utf8")).token')
+curl -sS -X DELETE "$BASE/auth/review/1" \
+  -H "Authorization: Bearer $TOKEN"
+
+The bearer token was obtained from the login response in the same local test
+session and is intentionally not included in this committed evidence file.
+
+Actual response:
+{"message":"Review deleted successfully"}

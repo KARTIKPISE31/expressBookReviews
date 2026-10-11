@@ -1,0 +1,12 @@
+Command:
+BASE=http://127.0.0.1:5000
+# Set PASSWORD to the same one-time test-only value used during registration.
+curl -sS -X POST "$BASE/login" \
+  -H 'Content-Type: application/json' \
+  -d "{\"username\":\"submission_evidence\",\"password\":\"$PASSWORD\"}"
+
+The actual login response included a generated bearer token. The token is
+redacted here so a credential is not committed to the public repository.
+
+Actual response (token redacted):
+{"message":"User successfully logged in","token":"[REDACTED: generated bearer token]"}

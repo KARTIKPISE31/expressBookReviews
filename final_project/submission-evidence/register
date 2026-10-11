@@ -1,0 +1,12 @@
+Command:
+BASE=http://127.0.0.1:5000
+# Set PASSWORD to a one-time test-only value before running this command.
+curl -sS -X POST "$BASE/register" \
+  -H 'Content-Type: application/json' \
+  -d "{\"username\":\"submission_evidence\",\"password\":\"$PASSWORD\"}"
+
+The password was a one-time local test value and is intentionally not included
+in this committed evidence file.
+
+Actual response:
+{"message":"User successfully registered"}
